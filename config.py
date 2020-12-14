@@ -29,6 +29,7 @@ password = os.getenv("POSTGRES_PASSWORD")
 username = os.getenv("POSTGRES_USER")
 database = os.getenv("POSTGRES_DB")
 hostname = "db"
+print("------------", password, username, database, "------------")
 if os.getenv("USE_POSTGRES"):
 	# use a psotgres db using above env variables
 	SQLALCHEMY_DATABASE_URI = f"postgresql://{username}:{password}@{hostname}/{database}"
